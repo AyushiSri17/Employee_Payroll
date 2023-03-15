@@ -22,10 +22,13 @@ insert into Employee_PayRoll (Salary, Name, startDate) values (12346, 'Ram', GET
 ----------------UC-4-----------------
 select * from Employee_Payroll;
 
-<<<<<<< HEAD
-=======
 ----------------UC-5-----------------
 select * from Employee_PayRoll where Name='Raju';
-select * from Employee_Payroll where StartDate Between '2020-01-01' AND getdate();
+select * from Employee_Payroll where StartDate BETWEEN '2020-01-01' AND getdate();
 select * from Employee_Payroll where StartDate between CAST('2023-01-01' as date) and GETDATE(); /*Cast method is used for conversion*/
->>>>>>> UC5-Retrieve_ParticularEmployeeInfo
+
+----------------UC-6-----------------
+
+ALTER TABLE Employee_Payroll ADD Gender char(1);
+UPDATE Employee_Payroll SET Gender = 'M' where Name = 'Vasu' or Name = 'Raju' or Name = 'Ram';
+UPDATE Employee_Payroll set Gender = 'F' where Name = 'Ayushi' or Name = 'Anjuli';
