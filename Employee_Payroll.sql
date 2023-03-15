@@ -45,9 +45,12 @@ select Min(Salary) As minSalary from Employee_Payroll;
 select Avg(Salary) As avgSalary, Gender from Employee_Payroll group by Gender;
 select Avg(Salary) As avgSalary from Employee_Payroll;
 
----------------------UC8--------------------
+----------------UC-8-------------------
 ALTER TABLE Employee_payroll ADD PhoneNumber varchar(20);
 ALTER TABLE Employee_payroll ADD EmpAddress varchar(20) DEFAULT 'INDIA';
 ALTER TABLE Employee_payroll ADD EmpDEPT varchar(10)not null DEFAULT 'IT';
 INSERT INTO employee_payroll VALUES('Sakshi','83456','24-oct-2022','F','2656546668','Ayodhya',Default);
 INSERT INTO employee_payroll VALUES('Dhoni','54000','2-nov-2012','M','9854662466',DEFAULT,DEFAULT);
+
+----------------UC-9-------------------
+ALTER TABLE Employee_payroll ADD BasicPay varchar(20), Deductions float(20), TaxablePay float(20), IncomeTax float(20), NetPay float(20);
