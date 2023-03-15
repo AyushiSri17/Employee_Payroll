@@ -19,3 +19,6 @@ insert into Employee_Payroll values('Vasu',126781,'2019-03-01');
 insert into Employee_Payroll (Salary, Name, StartDate) values (465789, 'Raju', getdate());
 insert into Employee_PayRoll (Salary, Name, startDate) values (12346, 'Ram', GETDATE());
 
+----------------UC-4-----------------
+select * from Employee_Payroll;
+
